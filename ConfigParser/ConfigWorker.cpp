@@ -5,7 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-void ConfigWorker::ParseConfig(std::string path) {
+void ConfigWorker::ParseConfig(std::string& path) {
     std::map<std::string, std::string> mp;
     std::ifstream is_file(path);
     std::string line;
@@ -18,7 +18,7 @@ void ConfigWorker::ParseConfig(std::string path) {
             std::string value;
             if (std::getline(is_line, value))
                mp[key] = value;
-                std::cout << key << ":" << mp[key] << std::endl;
+                std::cout << key << ":" << value << std::endl;
         }
         
     }

@@ -3,6 +3,6 @@
 #define CONFIGWORKER_H
 class ConfigWorker {
 public:
-	void ParseConfig(std::string path);
+	void ParseConfig(std::string& path);
 };
 #endif
